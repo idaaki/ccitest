@@ -14,7 +14,7 @@ dependencies:
 
   post:
     - sudo cp $HOME/$CIRCLE_PROJECT_REPONAME/circleci/apache2/sites-available/test.conf /etc/apache2/sites-available
-    - sudo a2ensite testhost
+    - sudo a2ensite test
     - sudo a2enmod rewrite
     - sudo service apache2 restart
 
