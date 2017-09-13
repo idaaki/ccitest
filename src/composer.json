@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpunit/phpunit": "*@stable",
+        "phpunit/phpunit-selenium": "*@stable",
+        "facebook/webdriver": "*@stable"
+    }
+}
