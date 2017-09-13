@@ -13,7 +13,7 @@ dependencies:
     - composer install -d src --no-interaction
 
   post:
-    - sudo cp $HOME/$CIRCLE_PROJECT_REPONAME/apache/sites-available/test.conf /etc/apache2/sites-available
+    - sudo cp $HOME/$CIRCLE_PROJECT_REPONAME/apache2/sites-available/test.conf /etc/apache2/sites-available
     - sudo a2ensite testhost
     - sudo a2enmod rewrite
     - sudo service apache2 restart
