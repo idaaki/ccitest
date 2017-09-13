@@ -11,12 +11,14 @@ machine:
 dependencies:
   override:
     - bundle install:
-      pwd:
-        src
   pre:
     - composer install --no-interaction
+      pwd:
+        src
 
 test:
   override:
-    - src/vendor/bin/phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml src/tests/
+    - vendor/bin/phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml tests/
+      pwd:
+        src
 
