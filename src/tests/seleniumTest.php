@@ -4,7 +4,7 @@ class seleniumTest extends PHPUnit_Extensions_Selenium2TestCase {
     protected function setUp()
     {
         $this->setHost("127.0.0.1");
-        $this->setPort(4444);
+        $this->setPort(8080);
     }
 
     public function testA()
