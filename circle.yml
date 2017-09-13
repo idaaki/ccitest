@@ -12,6 +12,12 @@ dependencies:
   pre:
     - composer install -d src --no-interaction
 
+  post:
+    - sudo cp $HOME/$CIRCLE_PROJECT_REPONAME/apache/sites-available/test.conf /etc/apache2/sites-available
+    - sudo a2ensite testhost
+    - sudo a2enmod rewrite
+    - sudo service apache2 restart
+
 test:
   override:
     - src/vendor/bin/phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml src/tests/
