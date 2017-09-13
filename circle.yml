@@ -10,13 +10,9 @@ machine:
 
 dependencies:
   pre:
-    - composer install --no-interaction
-      pwd:
-        src
+    - composer install -d src --no-interaction
 
 test:
   override:
-    - vendor/bin/phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml tests/
-      pwd:
-        src
+    - src/vendor/bin/phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml src/tests/
 
