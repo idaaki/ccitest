@@ -13,7 +13,7 @@ require_once './vendor/autoload.php';
 <body>
 <form action="send.php" method="post">
     <input type="text" name="name"/>
-    <button type="submit">send</button>
+    <button type="submit" name="send">send</button>
 </form>
 </body>
 </html>

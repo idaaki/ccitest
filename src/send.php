@@ -9,6 +9,6 @@
 ?>
 <html>
 <body>
-    name is <?php echo $_REQUEST['name'] ?>
+    name is <span id="name"><?php echo $_REQUEST['name'] ?></span>
 </body>
 </html>
